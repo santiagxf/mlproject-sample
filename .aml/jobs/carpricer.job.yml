@@ -1,0 +1,20 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
+display_name: carprices-regressor
+experiment_name: carprices-regressor
+description: A model to predict the price of a car.
+code: ../../src
+command: >-
+  jobtools carpricer.train.trainer train_regressor \
+            --input-dataset ${{inputs.input_dataset}} \
+            --params ${{inputs.params}}
+inputs:
+  input_dataset:
+    path: azureml:car-prices:1
+  params:
+    type: uri_file
+    path: ../../src/carpricer.params.yml
+    mode: download
+environment:
+  build:
+    path: docker-context
+compute: azureml:trainer-cpu
