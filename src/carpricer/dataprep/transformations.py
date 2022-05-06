@@ -5,7 +5,6 @@ import numpy as np
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler, OrdinalEncoder
 from sklearn.compose import ColumnTransformer
-from sklearn.model_selection import train_test_split
 
 def scale_and_encode(data: pd.DataFrame) -> Tuple[np.ndarray, ColumnTransformer]:
     """

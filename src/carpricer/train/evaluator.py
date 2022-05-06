@@ -1,14 +1,14 @@
-from typing import Any, List, Dict
-from sklearn.metrics import mean_absolute_error, r2_score, mean_squared_error
-from sklearn.model_selection import GridSearchCV
-
 import mlflow
 import sklearn_evaluation
 import numpy as np
 import matplotlib.pyplot as plt
 
+from typing import Any, List, Dict
+from sklearn.metrics import mean_absolute_error, r2_score, mean_squared_error
+from sklearn.model_selection import GridSearchCV
 
-def evaluate_search(search: GridSearchCV, plot_params_name: List[str], subset_params_name: List[str] = None):
+
+def evaluate_search(search: GridSearchCV, plot_params_name: List[str], subset_params_name: List[str] = None, to_mlflow: bool = False):
     """
     Evaluates a given parameters search by plotting the results in 2D plots, varying the different values
     on each axis. If the search contains more than 2 parameters, then one 2D graph is generated for each

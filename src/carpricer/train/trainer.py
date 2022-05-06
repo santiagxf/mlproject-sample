@@ -1,5 +1,9 @@
+import numpy as np
+import mlflow
+
 from types import SimpleNamespace
-from typing import Dict, Any
+from typing import Dict, Any, List
+from mlflow.models.signature import infer_signature
 from sklearn.model_selection import GridSearchCV
 from sklearn.pipeline import Pipeline
 from xgboost.sklearn import XGBRegressor
@@ -8,15 +12,34 @@ import carpricer.dataprep as dataprep
 from carpricer.dataprep import transformations
 from carpricer.train import evaluator
 
-import pandas as pd
-import numpy as np
-import mlflow
-
-from mlflow.models.signature import infer_signature
 
 
-def fit_and_optimize(data: np.ndarray, labels: np.ndarray, base_model: Any, param_grid: Dict[str, Any], 
-                     cv: int = 5, scoring_fit: str='neg_mean_squared_error'):
+
+def fit_and_optimize(data: np.ndarray, labels: np.ndarray, base_model: Any, param_grid: Dict[str, List[Any]], 
+                     cv: int = 5, scoring_fit: str='neg_mean_squared_error') -> GridSearchCV:
+    """
+    Fits multiple models searching accross multiple model's configurations of hyperparameters.
+
+    Parameters
+    ----------
+    data : np.ndarray
+        The training dataset as it is expected to be submmited to the model.
+    labels : np.ndarray
+        The associated labels of the training dataset
+    base_model : Any
+        The base model to fit. This model needs to comply with the Scikit-Learn API.
+    param_grid : Dict[str, List[Any]]
+        Grid of parameter values to try.
+    cv : int, optional
+        Number of CV rounds to execute, by default 5
+    scoring_fit : str, optional
+        Optimization metric to guide and select best estimator, by default 'neg_mean_squared_error'
+
+    Returns
+    -------
+    GridSearchCV
+        The search results
+    """
     gs = GridSearchCV(
         estimator=base_model,
         param_grid=param_grid, 
@@ -30,14 +53,31 @@ def fit_and_optimize(data: np.ndarray, labels: np.ndarray, base_model: Any, para
     return fitted_model
 
 
-def train_regressor(input_dataset: str, params: SimpleNamespace):
+def train_regressor(input_dataset: str, params: SimpleNamespace, to_mlflow: bool = True ) -> Any:
+    """
+    Train and evaluate a regressor model using the input dataset and the given parameters, including
+    hyper-parameter tunning. This method can log metrics, parameters and models using Mlflow.
+
+    Parameters
+    ----------
+    input_dataset : str
+        Path where the input dataset is placed.
+    params : SimpleNamespace
+        Training parameters and configuration.
+    to_mlflow: bool
+        If metrics, parameters and models should be logged with mlflow.
+
+    Returns
+    -------
+    Any
+        The best found ML pipeline.
+    """
     X_train, y_train, X_test, y_test = dataprep.train_test_split(input_dataset, params.data.test_size, params.data.label)
 
     X_train_transformed, transforms = transformations.scale_and_encode(X_train)
     X_test_transformed = transforms.transform(X_test)  
 
     base_model = XGBRegressor(silent=True, nthread=4, **vars(params.model.baseline))
-    mlflow.log_params(vars(params.model.baseline))   
 
     print(f"Looking for best combination of parameters with objective {params.model.tune.objective}. Parameters are {params.model.tune.search.keys()}")
     search = fit_and_optimize(X_train_transformed, 
@@ -48,18 +88,17 @@ def train_regressor(input_dataset: str, params: SimpleNamespace):
                               scoring_fit=params.model.tune.objective)
 
     print(f"Evaluating the performance of the model")
-    evaluator.evaluate_search(search, plot_params_name=['learning_rate', 'max_depth'])
+    evaluator.evaluate_search(search, plot_params_name=['learning_rate', 'max_depth'], to_mlflow = to_mlflow)
 
     best_model = search.best_estimator_
-    mlflow.log_params(search.best_params_)
-
     metrics = evaluator.evaluate_regressor(best_model, X_test_transformed, y_test)
-    mlflow.log_metrics(metrics)
-
     model_pipeline = Pipeline(steps=[('preprocessing', transforms),
                                      ('model', best_model)])
 
-    signature = infer_signature(X_test, y_test)
-    mlflow.sklearn.log_model("model", model_pipeline, signature=signature)
+    if to_mlflow:
+        mlflow.log_params(vars(params.model.baseline))   
+        mlflow.log_params(search.best_params_)
+        mlflow.log_metrics(metrics)
+        mlflow.sklearn.log_model("model", model_pipeline, signature=infer_signature(X_test, y_test))
 
     return model_pipeline
