@@ -1,0 +1,2689 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "carprices_profile",
+  "expectations": [
+    {
+      "expectation_type": "expect_table_columns_to_match_ordered_list",
+      "kwargs": {
+        "column_list": [
+          "make",
+          "fuel-type",
+          "aspiration",
+          "num-of-doors",
+          "body-style",
+          "drive-wheels",
+          "engine-location",
+          "wheel-base",
+          "length",
+          "width",
+          "height",
+          "curb-weight",
+          "engine-type",
+          "num-of-cylinders",
+          "engine-size",
+          "fuel-system",
+          "bore",
+          "stroke",
+          "compression-ratio",
+          "horsepower",
+          "peak-rpm",
+          "city-mpg",
+          "highway-mpg",
+          "lnprice"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_table_row_count_to_be_between",
+      "kwargs": {
+        "max_value": 194,
+        "min_value": 194
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "make",
+        "value_set": [
+          "alfa-romero",
+          "audi",
+          "bmw",
+          "chevrolet",
+          "dodge",
+          "honda",
+          "isuzu",
+          "jaguar",
+          "mazda",
+          "mercedes-benz",
+          "mercury",
+          "mitsubishi",
+          "nissan",
+          "peugot",
+          "plymouth",
+          "porsche",
+          "renault",
+          "saab",
+          "subaru",
+          "toyota",
+          "volkswagen",
+          "volvo"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "make"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "make",
+        "max_value": 0.1134020618556701,
+        "min_value": 0.1134020618556701
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "make",
+        "type_list": [
+          "CHAR",
+          "NCHAR",
+          "VARCHAR",
+          "NVARCHAR",
+          "TEXT",
+          "NTEXT",
+          "STRING",
+          "StringType",
+          "string",
+          "str",
+          "object",
+          "dtype('O')"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "fuel-type",
+        "value_set": [
+          "diesel",
+          "gas"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "fuel-type"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "fuel-type",
+        "max_value": 0.010309278350515464,
+        "min_value": 0.010309278350515464
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "fuel-type",
+        "type_list": [
+          "CHAR",
+          "NCHAR",
+          "VARCHAR",
+          "NVARCHAR",
+          "TEXT",
+          "NTEXT",
+          "STRING",
+          "StringType",
+          "string",
+          "str",
+          "object",
+          "dtype('O')"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "aspiration",
+        "value_set": [
+          "std",
+          "turbo"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "aspiration"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "aspiration",
+        "max_value": 0.010309278350515464,
+        "min_value": 0.010309278350515464
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "aspiration",
+        "type_list": [
+          "CHAR",
+          "NCHAR",
+          "VARCHAR",
+          "NVARCHAR",
+          "TEXT",
+          "NTEXT",
+          "STRING",
+          "StringType",
+          "string",
+          "str",
+          "object",
+          "dtype('O')"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "num-of-doors",
+        "value_set": [
+          "four",
+          "two"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "num-of-doors"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "num-of-doors",
+        "max_value": 0.010309278350515464,
+        "min_value": 0.010309278350515464
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "num-of-doors",
+        "type_list": [
+          "CHAR",
+          "NCHAR",
+          "VARCHAR",
+          "NVARCHAR",
+          "TEXT",
+          "NTEXT",
+          "STRING",
+          "StringType",
+          "string",
+          "str",
+          "object",
+          "dtype('O')"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "body-style",
+        "value_set": [
+          "convertible",
+          "hardtop",
+          "hatchback",
+          "sedan",
+          "wagon"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "body-style"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "body-style",
+        "max_value": 0.02577319587628866,
+        "min_value": 0.02577319587628866
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "body-style",
+        "type_list": [
+          "CHAR",
+          "NCHAR",
+          "VARCHAR",
+          "NVARCHAR",
+          "TEXT",
+          "NTEXT",
+          "STRING",
+          "StringType",
+          "string",
+          "str",
+          "object",
+          "dtype('O')"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "drive-wheels",
+        "value_set": [
+          "4wd",
+          "fwd",
+          "rwd"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "drive-wheels"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "drive-wheels",
+        "max_value": 0.015463917525773196,
+        "min_value": 0.015463917525773196
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "drive-wheels",
+        "type_list": [
+          "CHAR",
+          "NCHAR",
+          "VARCHAR",
+          "NVARCHAR",
+          "TEXT",
+          "NTEXT",
+          "STRING",
+          "StringType",
+          "string",
+          "str",
+          "object",
+          "dtype('O')"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "engine-location",
+        "value_set": [
+          "front",
+          "rear"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "engine-location"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "engine-location",
+        "max_value": 0.010309278350515464,
+        "min_value": 0.010309278350515464
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "engine-location",
+        "type_list": [
+          "CHAR",
+          "NCHAR",
+          "VARCHAR",
+          "NVARCHAR",
+          "TEXT",
+          "NTEXT",
+          "STRING",
+          "StringType",
+          "string",
+          "str",
+          "object",
+          "dtype('O')"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_min_to_be_between",
+      "kwargs": {
+        "column": "wheel-base",
+        "max_value": -2.05235942134652,
+        "min_value": -2.05235942134652
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_max_to_be_between",
+      "kwargs": {
+        "column": "wheel-base",
+        "max_value": 3.71609255817785,
+        "min_value": 3.71609255817785
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_mean_to_be_between",
+      "kwargs": {
+        "column": "wheel-base",
+        "max_value": -8.561307447624918e-15,
+        "min_value": -8.561307447624918e-15
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_median_to_be_between",
+      "kwargs": {
+        "column": "wheel-base",
+        "max_value": -0.3117332409361025,
+        "min_value": -0.3117332409361025
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_quantile_values_to_be_between",
+      "kwargs": {
+        "allow_relative_error": "lower",
+        "column": "wheel-base",
+        "quantile_ranges": {
+          "quantiles": [
+            0.05,
+            0.25,
+            0.5,
+            0.75,
+            0.95
+          ],
+          "value_ranges": [
+            [
+              -0.959212544760267,
+              -0.959212544760267
+            ],
+            [
+              -0.723765525187843,
+              -0.723765525187843
+            ],
+            [
+              -0.320142063063689,
+              -0.320142063063689
+            ],
+            [
+              0.60482837097083,
+              0.60482837097083
+            ],
+            [
+              1.88296933436398,
+              1.88296933436398
+            ]
+          ]
+        }
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "wheel-base",
+        "value_set": [
+          -2.05235942134652,
+          -1.7496418247534,
+          -1.71600653624306,
+          -1.5646477379465,
+          -1.26193014135338,
+          -0.976030189015439,
+          -0.959212544760267,
+          -0.92557725624992,
+          -0.858306679229227,
+          -0.75740081369819,
+          -0.723765525187843,
+          -0.622859659656806,
+          -0.589224371146459,
+          -0.521953794125766,
+          -0.488318505615419,
+          -0.471500861360247,
+          -0.454683217105075,
+          -0.421047928594728,
+          -0.387412640084382,
+          -0.37059499582921,
+          -0.320142063063689,
+          -0.303324418808516,
+          -0.26968913029817,
+          -0.252871486042998,
+          -0.0678773992360925,
+          -0.0006068222154016,
+          0.0498461105501171,
+          0.0666637548052916,
+          0.100299043315638,
+          0.167569620336329,
+          0.268475485867369,
+          0.403016639908753,
+          0.537557793950137,
+          0.60482837097083,
+          0.655281303736349,
+          0.688916592246696,
+          0.756187169267386,
+          0.789822457777733,
+          0.924363611819117,
+          0.957998900329464,
+          1.02526947735016,
+          1.17662827564671,
+          1.32798707394327,
+          1.52979880500535,
+          1.54661644926052,
+          1.73161053606742,
+          1.88296933436398,
+          2.21932221946744,
+          2.38749866201917,
+          2.58931039308125,
+          2.82475741265367,
+          3.71609255817785
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "wheel-base"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "wheel-base",
+        "max_value": 0.26804123711340205,
+        "min_value": 0.26804123711340205
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "wheel-base",
+        "type_list": [
+          "FLOAT",
+          "FLOAT4",
+          "FLOAT8",
+          "FLOAT64",
+          "DOUBLE",
+          "DOUBLE_PRECISION",
+          "NUMERIC",
+          "FloatType",
+          "DoubleType",
+          "float",
+          "float_",
+          "float16",
+          "float32",
+          "float64",
+          "number",
+          "DECIMAL",
+          "REAL"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_min_to_be_between",
+      "kwargs": {
+        "column": "length",
+        "max_value": -2.69091218099396,
+        "min_value": -2.69091218099396
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_max_to_be_between",
+      "kwargs": {
+        "column": "length",
+        "max_value": 2.77066345470183,
+        "min_value": 2.77066345470183
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_mean_to_be_between",
+      "kwargs": {
+        "column": "length",
+        "max_value": -6.208092459347267e-15,
+        "min_value": -6.208092459347267e-15
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_median_to_be_between",
+      "kwargs": {
+        "column": "length",
+        "max_value": -0.0742468391158278,
+        "min_value": -0.0742468391158278
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_quantile_values_to_be_between",
+      "kwargs": {
+        "allow_relative_error": "lower",
+        "column": "length",
+        "quantile_ranges": {
+          "quantiles": [
+            0.05,
+            0.25,
+            0.5,
+            0.75,
+            0.95
+          ],
+          "value_ranges": [
+            [
+              -1.37035210191528,
+              -1.37035210191528
+            ],
+            [
+              -0.636707613538229,
+              -0.636707613538229
+            ],
+            [
+              -0.0742468391158278,
+              -0.0742468391158278
+            ],
+            [
+              0.732762098098925,
+              0.732762098098925
+            ],
+            [
+              1.60498387872497,
+              1.60498387872497
+            ]
+          ]
+        }
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "length"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "length",
+        "max_value": 0.37628865979381443,
+        "min_value": 0.37628865979381443
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "length",
+        "type_list": [
+          "FLOAT",
+          "FLOAT4",
+          "FLOAT8",
+          "FLOAT64",
+          "DOUBLE",
+          "DOUBLE_PRECISION",
+          "NUMERIC",
+          "FloatType",
+          "DoubleType",
+          "float",
+          "float_",
+          "float16",
+          "float32",
+          "float64",
+          "number",
+          "DECIMAL",
+          "REAL"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_min_to_be_between",
+      "kwargs": {
+        "column": "width",
+        "max_value": -2.65724426480677,
+        "min_value": -2.65724426480677
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_max_to_be_between",
+      "kwargs": {
+        "column": "width",
+        "max_value": 2.91913612744402,
+        "min_value": 2.91913612744402
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_mean_to_be_between",
+      "kwargs": {
+        "column": "width",
+        "max_value": 1.8070310425548425e-14,
+        "min_value": 1.8070310425548425e-14
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_median_to_be_between",
+      "kwargs": {
+        "column": "width",
+        "max_value": -0.178852979361978,
+        "min_value": -0.178852979361978
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_quantile_values_to_be_between",
+      "kwargs": {
+        "allow_relative_error": "lower",
+        "column": "width",
+        "quantile_ranges": {
+          "quantiles": [
+            0.05,
+            0.25,
+            0.5,
+            0.75,
+            0.95
+          ],
+          "value_ranges": [
+            [
+              -1.08441902596681,
+              -1.08441902596681
+            ],
+            [
+              -0.846112171597118,
+              -0.846112171597118
+            ],
+            [
+              -0.178852979361978,
+              -0.178852979361978
+            ],
+            [
+              0.297760729377406,
+              0.297760729377406
+            ],
+            [
+              2.10889282258706,
+              2.10889282258706
+            ]
+          ]
+        }
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "width",
+        "value_set": [
+          -2.65724426480677,
+          -1.9423237016977,
+          -1.60869410558013,
+          -1.17974176771468,
+          -1.08441902596681,
+          -0.989096284218932,
+          -0.941434913344993,
+          -0.893773542471054,
+          -0.846112171597118,
+          -0.798450800723175,
+          -0.703128058975297,
+          -0.607805317227426,
+          -0.512482575479548,
+          -0.41715983373167,
+          -0.321837091983792,
+          -0.226514350235914,
+          -0.178852979361978,
+          -0.131191608488042,
+          -0.0835302376140999,
+          0.0594538750077139,
+          0.10711524588165,
+          0.154776616755592,
+          0.202437987629528,
+          0.25009935850347,
+          0.297760729377406,
+          0.345422100251341,
+          0.488406212873162,
+          0.631390325494976,
+          0.869697179864668,
+          0.965019921612546,
+          1.01268129248648,
+          1.1556654051083,
+          1.20332677598224,
+          1.39397225947799,
+          1.44163363035193,
+          1.77526322646949,
+          2.10889282258706,
+          2.20421556433494,
+          2.25187693520888,
+          2.3948610478307,
+          2.63316790220039,
+          2.7761520148222,
+          2.91913612744402
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "width"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "width",
+        "max_value": 0.22164948453608246,
+        "min_value": 0.22164948453608246
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "width",
+        "type_list": [
+          "FLOAT",
+          "FLOAT4",
+          "FLOAT8",
+          "FLOAT64",
+          "DOUBLE",
+          "DOUBLE_PRECISION",
+          "NUMERIC",
+          "FloatType",
+          "DoubleType",
+          "float",
+          "float_",
+          "float16",
+          "float32",
+          "float64",
+          "number",
+          "DECIMAL",
+          "REAL"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_min_to_be_between",
+      "kwargs": {
+        "column": "height",
+        "max_value": -2.46886058895547,
+        "min_value": -2.46886058895547
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_max_to_be_between",
+      "kwargs": {
+        "column": "height",
+        "max_value": 2.46801232900388,
+        "min_value": 2.46801232900388
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_mean_to_be_between",
+      "kwargs": {
+        "column": "height",
+        "max_value": -2.62058416204305e-14,
+        "min_value": -2.62058416204305e-14
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_median_to_be_between",
+      "kwargs": {
+        "column": "height",
+        "max_value": 0.122997692973189,
+        "min_value": 0.122997692973189
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_quantile_values_to_be_between",
+      "kwargs": {
+        "allow_relative_error": "lower",
+        "column": "height",
+        "quantile_ranges": {
+          "quantiles": [
+            0.05,
+            0.25,
+            0.5,
+            0.75,
+            0.95
+          ],
+          "value_ranges": [
+            [
+              -1.68718904361191,
+              -1.68718904361191
+            ],
+            [
+              -0.740955067669699,
+              -0.740955067669699
+            ],
+            [
+              0.122997692973189,
+              0.122997692973189
+            ],
+            [
+              0.698966200068446,
+              0.698966200068446
+            ],
+            [
+              1.52177835306167,
+              1.52177835306167
+            ]
+          ]
+        }
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "height",
+        "value_set": [
+          -2.46886058895547,
+          -2.05745451245886,
+          -1.81061086656089,
+          -1.72832965126157,
+          -1.68718904361191,
+          -1.4814860053636,
+          -1.35806418241462,
+          -1.31692357476496,
+          -1.23464235946564,
+          -1.15236114416631,
+          -0.987798713567667,
+          -0.905517498268343,
+          -0.740955067669699,
+          -0.576392637071054,
+          -0.535252029421392,
+          -0.494111421771731,
+          -0.41183020647241,
+          -0.329548991173086,
+          -0.288408383523424,
+          -0.247267775873762,
+          -0.206127168224103,
+          -0.123845952924779,
+          -0.0415647376254557,
+          0.0407164776738651,
+          0.122997692973189,
+          0.20527890827251,
+          0.246419515922172,
+          0.287560123571834,
+          0.369841338871157,
+          0.410981946520816,
+          0.452122554170478,
+          0.534403769469802,
+          0.575544377119464,
+          0.657825592418785,
+          0.698966200068446,
+          0.740106807718108,
+          0.78124741536777,
+          0.863528630667091,
+          0.904669238316753,
+          0.945809845966415,
+          0.986950453616077,
+          1.02809106126574,
+          1.11037227656506,
+          1.19265349186438,
+          1.52177835306167,
+          1.85090321425896,
+          2.01546564485761,
+          2.18002807545625,
+          2.46801232900388
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "height"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "height",
+        "max_value": 0.25257731958762886,
+        "min_value": 0.25257731958762886
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "height",
+        "type_list": [
+          "FLOAT",
+          "FLOAT4",
+          "FLOAT8",
+          "FLOAT64",
+          "DOUBLE",
+          "DOUBLE_PRECISION",
+          "NUMERIC",
+          "FloatType",
+          "DoubleType",
+          "float",
+          "float_",
+          "float16",
+          "float32",
+          "float64",
+          "number",
+          "DECIMAL",
+          "REAL"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_min_to_be_between",
+      "kwargs": {
+        "column": "curb-weight",
+        "max_value": -2.08081438300952,
+        "min_value": -2.08081438300952
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_max_to_be_between",
+      "kwargs": {
+        "column": "curb-weight",
+        "max_value": 2.98059701522947,
+        "min_value": 2.98059701522947
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_mean_to_be_between",
+      "kwargs": {
+        "column": "curb-weight",
+        "max_value": 4.486674491268674e-16,
+        "min_value": 4.486674491268674e-16
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_median_to_be_between",
+      "kwargs": {
+        "column": "curb-weight",
+        "max_value": -0.26278996300591,
+        "min_value": -0.26278996300591
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_quantile_values_to_be_between",
+      "kwargs": {
+        "allow_relative_error": "lower",
+        "column": "curb-weight",
+        "quantile_ranges": {
+          "quantiles": [
+            0.05,
+            0.25,
+            0.5,
+            0.75,
+            0.95
+          ],
+          "value_ranges": [
+            [
+              -1.27193094775953,
+              -1.27193094775953
+            ],
+            [
+              -0.790920167089032,
+              -0.790920167089032
+            ],
+            [
+              -0.26278996300591,
+              -0.26278996300591
+            ],
+            [
+              0.732607856585699,
+              0.732607856585699
+            ],
+            [
+              1.85954739987087,
+              1.85954739987087
+            ]
+          ]
+        }
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "curb-weight"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "curb-weight",
+        "max_value": 0.8711340206185567,
+        "min_value": 0.8711340206185567
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "curb-weight",
+        "type_list": [
+          "FLOAT",
+          "FLOAT4",
+          "FLOAT8",
+          "FLOAT64",
+          "DOUBLE",
+          "DOUBLE_PRECISION",
+          "NUMERIC",
+          "FloatType",
+          "DoubleType",
+          "float",
+          "float_",
+          "float16",
+          "float32",
+          "float64",
+          "number",
+          "DECIMAL",
+          "REAL"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "engine-type",
+        "value_set": [
+          "dohc",
+          "l",
+          "ohc",
+          "ohcf",
+          "ohcv",
+          "rotor"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "engine-type"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "engine-type",
+        "max_value": 0.030927835051546393,
+        "min_value": 0.030927835051546393
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "engine-type",
+        "type_list": [
+          "CHAR",
+          "NCHAR",
+          "VARCHAR",
+          "NVARCHAR",
+          "TEXT",
+          "NTEXT",
+          "STRING",
+          "StringType",
+          "string",
+          "str",
+          "object",
+          "dtype('O')"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "num-of-cylinders",
+        "value_set": [
+          "cinco-seis",
+          "cuatro-o-menos",
+          "ocho-doce"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "num-of-cylinders"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "num-of-cylinders",
+        "max_value": 0.015463917525773196,
+        "min_value": 0.015463917525773196
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "num-of-cylinders",
+        "type_list": [
+          "CHAR",
+          "NCHAR",
+          "VARCHAR",
+          "NVARCHAR",
+          "TEXT",
+          "NTEXT",
+          "STRING",
+          "StringType",
+          "string",
+          "str",
+          "object",
+          "dtype('O')"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_min_to_be_between",
+      "kwargs": {
+        "column": "engine-size",
+        "max_value": -1.67374314912999,
+        "min_value": -1.67374314912999
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_max_to_be_between",
+      "kwargs": {
+        "column": "engine-size",
+        "max_value": 4.01419889485793,
+        "min_value": 4.01419889485793
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_mean_to_be_between",
+      "kwargs": {
+        "column": "engine-size",
+        "max_value": 3.8457209925160063e-16,
+        "min_value": 3.8457209925160063e-16
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_median_to_be_between",
+      "kwargs": {
+        "column": "engine-size",
+        "max_value": -0.3881124131601225,
+        "min_value": -0.3881124131601225
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_quantile_values_to_be_between",
+      "kwargs": {
+        "allow_relative_error": "lower",
+        "column": "engine-size",
+        "quantile_ranges": {
+          "quantiles": [
+            0.05,
+            0.25,
+            0.5,
+            0.75,
+            0.95
+          ],
+          "value_ranges": [
+            [
+              -0.920545344218353,
+              -0.920545344218353
+            ],
+            [
+              -0.738738977515542,
+              -0.738738977515542
+            ],
+            [
+              -0.401098582210323,
+              -0.401098582210323
+            ],
+            [
+              0.404043898902122,
+              0.404043898902122
+            ],
+            [
+              1.7805778182234,
+              1.7805778182234
+            ]
+          ]
+        }
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "engine-size",
+        "value_set": [
+          -1.67374314912999,
+          -1.43999210622638,
+          -1.20624106332277,
+          -1.18026872522237,
+          -0.920545344218353,
+          -0.894573006117951,
+          -0.86860066801755,
+          -0.738738977515542,
+          -0.712766639415141,
+          -0.582904948913134,
+          -0.453043258411126,
+          -0.427070920310725,
+          -0.401098582210323,
+          -0.375126244109922,
+          -0.16734753930671,
+          -0.141375201206309,
+          -0.115402863105907,
+          -0.0894305250055059,
+          0.118348179797706,
+          0.144320517898107,
+          0.170292855998509,
+          0.222237532199312,
+          0.274182208400114,
+          0.37807156080172,
+          0.404043898902122,
+          0.507933251303728,
+          0.533905589404129,
+          0.663767279906136,
+          0.689739618006538,
+          0.793628970408144,
+          0.923490660910151,
+          1.00140767521136,
+          1.18321404191417,
+          1.23515871811497,
+          1.44293742291818,
+          1.49488209911898,
+          1.7805778182234,
+          2.17016288972942,
+          2.81947134223946,
+          3.44280745664909,
+          4.01419889485793
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "engine-size"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "engine-size",
+        "max_value": 0.211340206185567,
+        "min_value": 0.211340206185567
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "engine-size",
+        "type_list": [
+          "FLOAT",
+          "FLOAT4",
+          "FLOAT8",
+          "FLOAT64",
+          "DOUBLE",
+          "DOUBLE_PRECISION",
+          "NUMERIC",
+          "FloatType",
+          "DoubleType",
+          "float",
+          "float_",
+          "float16",
+          "float32",
+          "float64",
+          "number",
+          "DECIMAL",
+          "REAL"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "fuel-system",
+        "value_set": [
+          "1bbl",
+          "2bbl",
+          "4bbl",
+          "idi",
+          "mfi",
+          "mpfi",
+          "spdi",
+          "spfi"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "fuel-system"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "fuel-system",
+        "max_value": 0.041237113402061855,
+        "min_value": 0.041237113402061855
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "fuel-system",
+        "type_list": [
+          "CHAR",
+          "NCHAR",
+          "VARCHAR",
+          "NVARCHAR",
+          "TEXT",
+          "NTEXT",
+          "STRING",
+          "StringType",
+          "string",
+          "str",
+          "object",
+          "dtype('O')"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_min_to_be_between",
+      "kwargs": {
+        "column": "bore",
+        "max_value": -2.93053609811952,
+        "min_value": -2.93053609811952
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_max_to_be_between",
+      "kwargs": {
+        "column": "bore",
+        "max_value": 2.25199811368711,
+        "min_value": 2.25199811368711
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_mean_to_be_between",
+      "kwargs": {
+        "column": "bore",
+        "max_value": -3.4794618503716246e-16,
+        "min_value": -3.4794618503716246e-16
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_median_to_be_between",
+      "kwargs": {
+        "column": "bore",
+        "max_value": -0.0801422816258754,
+        "min_value": -0.0801422816258754
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_quantile_values_to_be_between",
+      "kwargs": {
+        "allow_relative_error": "lower",
+        "column": "bore",
+        "quantile_ranges": {
+          "quantiles": [
+            0.05,
+            0.25,
+            0.5,
+            0.75,
+            0.95
+          ],
+          "value_ranges": [
+            [
+              -1.52384824062915,
+              -1.52384824062915
+            ],
+            [
+              -0.672431905832348,
+              -0.672431905832348
+            ],
+            [
+              -0.0801422816258754,
+              -0.0801422816258754
+            ],
+            [
+              0.956364560735449,
+              0.956364560735449
+            ],
+            [
+              1.65970848948063,
+              1.65970848948063
+            ]
+          ]
+        }
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "bore",
+        "value_set": [
+          -2.93053609811952,
+          -2.41228267693886,
+          -1.56086634214205,
+          -1.52384824062915,
+          -1.33875773306463,
+          -1.26472153003882,
+          -1.19068532701301,
+          -1.1166491239872,
+          -1.04261292096139,
+          -0.931558616422678,
+          -0.746468108858157,
+          -0.672431905832348,
+          -0.598395702806539,
+          -0.52435949978073,
+          -0.339268992216206,
+          -0.228214687677493,
+          -0.0801422816258754,
+          -0.0061060786000663,
+          0.0309120229128373,
+          0.0679301244257427,
+          0.216002530477361,
+          0.364074936528979,
+          0.475129241067692,
+          0.512147342580597,
+          0.62320164711931,
+          0.771274053170928,
+          0.919346459222546,
+          0.956364560735449,
+          0.993382662248355,
+          1.03040076376126,
+          1.06741886527416,
+          1.10443696678707,
+          1.3635636773774,
+          1.51163608342902,
+          1.58567228645483,
+          1.65970848948063,
+          1.73374469250644,
+          2.25199811368711
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "bore"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "bore",
+        "max_value": 0.1958762886597938,
+        "min_value": 0.1958762886597938
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "bore",
+        "type_list": [
+          "FLOAT",
+          "FLOAT4",
+          "FLOAT8",
+          "FLOAT64",
+          "DOUBLE",
+          "DOUBLE_PRECISION",
+          "NUMERIC",
+          "FloatType",
+          "DoubleType",
+          "float",
+          "float_",
+          "float16",
+          "float32",
+          "float64",
+          "number",
+          "DECIMAL",
+          "REAL"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_min_to_be_between",
+      "kwargs": {
+        "column": "stroke",
+        "max_value": -3.82855008788944,
+        "min_value": -3.82855008788944
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_max_to_be_between",
+      "kwargs": {
+        "column": "stroke",
+        "max_value": 2.94267329307937,
+        "min_value": 2.94267329307937
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_mean_to_be_between",
+      "kwargs": {
+        "column": "stroke",
+        "max_value": 2.0895084059336968e-14,
+        "min_value": 2.0895084059336968e-14
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_median_to_be_between",
+      "kwargs": {
+        "column": "stroke",
+        "max_value": 0.105208257244824,
+        "min_value": 0.105208257244824
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_quantile_values_to_be_between",
+      "kwargs": {
+        "allow_relative_error": "lower",
+        "column": "stroke",
+        "quantile_ranges": {
+          "quantiles": [
+            0.05,
+            0.25,
+            0.5,
+            0.75,
+            0.95
+          ],
+          "value_ranges": [
+            [
+              -1.99064659876933,
+              -1.99064659876933
+            ],
+            [
+              -0.475182318266789,
+              -0.475182318266789
+            ],
+            [
+              0.105208257244824,
+              0.105208257244824
+            ],
+            [
+              0.492135307585899,
+              0.492135307585899
+            ],
+            [
+              1.23374548740629,
+              1.23374548740629
+            ]
+          ]
+        }
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "stroke",
+        "value_set": [
+          -3.82855008788944,
+          -3.44162303754836,
+          -2.89347638289851,
+          -1.99064659876933,
+          -1.86167091532231,
+          -1.60371954842826,
+          -1.47474386498123,
+          -1.24903641894894,
+          -1.15230465636367,
+          -0.733133685160839,
+          -0.604158001713814,
+          -0.571914080852057,
+          -0.507426239128544,
+          -0.475182318266789,
+          -0.442938397405032,
+          -0.346206634819764,
+          -0.313962713958007,
+          -0.217230951372739,
+          -0.152743109649226,
+          -0.0882552679257136,
+          0.0407204155213114,
+          0.105208257244824,
+          0.298671782415361,
+          0.427647465862386,
+          0.459891386724142,
+          0.492135307585899,
+          0.65335491189468,
+          0.685598832756437,
+          0.782330595341705,
+          0.846818437065217,
+          0.91130627878873,
+          1.04028196223575,
+          1.23374548740629,
+          1.94311174636493,
+          2.07208742981195,
+          2.94267329307937
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "stroke"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "stroke",
+        "max_value": 0.18556701030927836,
+        "min_value": 0.18556701030927836
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "stroke",
+        "type_list": [
+          "FLOAT",
+          "FLOAT4",
+          "FLOAT8",
+          "FLOAT64",
+          "DOUBLE",
+          "DOUBLE_PRECISION",
+          "NUMERIC",
+          "FloatType",
+          "DoubleType",
+          "float",
+          "float_",
+          "float16",
+          "float32",
+          "float64",
+          "number",
+          "DECIMAL",
+          "REAL"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_min_to_be_between",
+      "kwargs": {
+        "column": "compression-ratio",
+        "max_value": -0.790334368983933,
+        "min_value": -0.790334368983933
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_max_to_be_between",
+      "kwargs": {
+        "column": "compression-ratio",
+        "max_value": 3.22590262608193,
+        "min_value": 3.22590262608193
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_mean_to_be_between",
+      "kwargs": {
+        "column": "compression-ratio",
+        "max_value": -2.0144252817940985e-16,
+        "min_value": -2.0144252817940985e-16
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_median_to_be_between",
+      "kwargs": {
+        "column": "compression-ratio",
+        "max_value": -0.288304744600701,
+        "min_value": -0.288304744600701
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_quantile_values_to_be_between",
+      "kwargs": {
+        "allow_relative_error": "lower",
+        "column": "compression-ratio",
+        "quantile_ranges": {
+          "quantiles": [
+            0.05,
+            0.25,
+            0.5,
+            0.75,
+            0.95
+          ],
+          "value_ranges": [
+            [
+              -0.664826962888125,
+              -0.664826962888125
+            ],
+            [
+              -0.413812150696509,
+              -0.413812150696509
+            ],
+            [
+              -0.288304744600701,
+              -0.288304744600701
+            ],
+            [
+              -0.187898819724054,
+              -0.187898819724054
+            ],
+            [
+              2.94978633267115,
+              2.94978633267115
+            ]
+          ]
+        }
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "compression-ratio",
+        "value_set": [
+          -0.790334368983933,
+          -0.664826962888125,
+          -0.639725481668964,
+          -0.614624000449802,
+          -0.58952251923064,
+          -0.539319556792317,
+          -0.514218075573155,
+          -0.464015113134832,
+          -0.43891363191567,
+          -0.413812150696509,
+          -0.388710669477347,
+          -0.363609188258186,
+          -0.338507707039024,
+          -0.288304744600701,
+          -0.263203263381539,
+          -0.238101782162378,
+          -0.213000300943216,
+          -0.2104901528213,
+          -0.187898819724054,
+          -0.185388671602138,
+          -0.162797338504893,
+          -0.137695857285731,
+          -0.0372899324090846,
+          -0.0121884511899231,
+          0.33923228587834,
+          2.72387300169869,
+          2.8493804077945,
+          2.94978633267115,
+          2.97488781389031,
+          3.10039521998612,
+          3.15059818242444,
+          3.22590262608193
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "compression-ratio"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "compression-ratio",
+        "max_value": 0.16494845360824742,
+        "min_value": 0.16494845360824742
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "compression-ratio",
+        "type_list": [
+          "FLOAT",
+          "FLOAT4",
+          "FLOAT8",
+          "FLOAT64",
+          "DOUBLE",
+          "DOUBLE_PRECISION",
+          "NUMERIC",
+          "FloatType",
+          "DoubleType",
+          "float",
+          "float_",
+          "float16",
+          "float32",
+          "float64",
+          "number",
+          "DECIMAL",
+          "REAL"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_min_to_be_between",
+      "kwargs": {
+        "column": "horsepower",
+        "max_value": -1.47920499954756,
+        "min_value": -1.47920499954756
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_max_to_be_between",
+      "kwargs": {
+        "column": "horsepower",
+        "max_value": 4.32795100624124,
+        "min_value": 4.32795100624124
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_mean_to_be_between",
+      "kwargs": {
+        "column": "horsepower",
+        "max_value": -3.6168090286757677e-16,
+        "min_value": -3.6168090286757677e-16
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_median_to_be_between",
+      "kwargs": {
+        "column": "horsepower",
+        "max_value": -0.203801577715442,
+        "min_value": -0.203801577715442
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_quantile_values_to_be_between",
+      "kwargs": {
+        "allow_relative_error": "lower",
+        "column": "horsepower",
+        "quantile_ranges": {
+          "quantiles": [
+            0.05,
+            0.25,
+            0.5,
+            0.75,
+            0.95
+          ],
+          "value_ranges": [
+            [
+              -1.0992975972997,
+              -1.0992975972997
+            ],
+            [
+              -0.882207653158059,
+              -0.882207653158059
+            ],
+            [
+              -0.203801577715442,
+              -0.203801577715442
+            ],
+            [
+              0.366059525656357,
+              0.366059525656357
+            ],
+            [
+              1.96709786370093,
+              1.96709786370093
+            ]
+          ]
+        }
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "horsepower",
+        "value_set": [
+          -1.47920499954756,
+          -1.37066002747674,
+          -1.28925129842363,
+          -1.26211505540593,
+          -1.20784256937052,
+          -1.15357008333511,
+          -1.0992975972997,
+          -1.04502511126429,
+          -0.936480139193469,
+          -0.909343896175764,
+          -0.882207653158059,
+          -0.82793516712265,
+          -0.800798924104945,
+          -0.719390195051831,
+          -0.665117709016422,
+          -0.556572736945603,
+          -0.502300250910194,
+          -0.475164007892489,
+          -0.448027764874784,
+          -0.393755278839375,
+          -0.339482792803966,
+          -0.285210306768556,
+          -0.230937820733147,
+          -0.203801577715442,
+          -0.149529091680033,
+          -0.0681203626269186,
+          -0.0409841196092139,
+          -0.0138478765915092,
+          0.0946970954793096,
+          0.203242067550128,
+          0.230378310567833,
+          0.257514553585538,
+          0.311787039620947,
+          0.338923282638652,
+          0.366059525656357,
+          0.474604497727175,
+          0.50174074074488,
+          0.556013226780289,
+          0.854511899975041,
+          0.881648142992746,
+          1.01732935808127,
+          1.07160184411668,
+          1.09873808713438,
+          1.15301057316979,
+          1.34296427429373,
+          1.39723676032913,
+          1.42437300334684,
+          1.45150924636454,
+          1.56005421843536,
+          1.58719046145307,
+          1.61432670447077,
+          1.96709786370093,
+          1.99423410671864,
+          2.15705156482487,
+          2.21132405086028,
+          2.64550393914355,
+          2.83545764026748,
+          4.32795100624124
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "horsepower"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "horsepower",
+        "max_value": 0.29896907216494845,
+        "min_value": 0.29896907216494845
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "horsepower",
+        "type_list": [
+          "FLOAT",
+          "FLOAT4",
+          "FLOAT8",
+          "FLOAT64",
+          "DOUBLE",
+          "DOUBLE_PRECISION",
+          "NUMERIC",
+          "FloatType",
+          "DoubleType",
+          "float",
+          "float_",
+          "float16",
+          "float32",
+          "float64",
+          "number",
+          "DECIMAL",
+          "REAL"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_min_to_be_between",
+      "kwargs": {
+        "column": "peak-rpm",
+        "max_value": -2.05113896939408,
+        "min_value": -2.05113896939408
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_max_to_be_between",
+      "kwargs": {
+        "column": "peak-rpm",
+        "max_value": 3.09620185506741,
+        "min_value": 3.09620185506741
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_mean_to_be_between",
+      "kwargs": {
+        "column": "peak-rpm",
+        "max_value": 7.5083124139598215e-16,
+        "min_value": 7.5083124139598215e-16
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_median_to_be_between",
+      "kwargs": {
+        "column": "peak-rpm",
+        "max_value": 0.154864241089417,
+        "min_value": 0.154864241089417
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_quantile_values_to_be_between",
+      "kwargs": {
+        "allow_relative_error": "lower",
+        "column": "peak-rpm",
+        "quantile_ranges": {
+          "quantiles": [
+            0.05,
+            0.25,
+            0.5,
+            0.75,
+            0.95
+          ],
+          "value_ranges": [
+            [
+              -1.84104342553851,
+              -1.84104342553851
+            ],
+            [
+              -0.685517934332868,
+              -0.685517934332868
+            ],
+            [
+              0.154864241089417,
+              0.154864241089417
+            ],
+            [
+              0.78515087265613,
+              0.78515087265613
+            ],
+            [
+              1.83562859193399,
+              1.83562859193399
+            ]
+          ]
+        }
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "peak-rpm",
+        "value_set": [
+          -2.05113896939408,
+          -1.9460911974663,
+          -1.84104342553851,
+          -1.63094788168294,
+          -1.52590010975515,
+          -1.31580456589958,
+          -1.00066125011623,
+          -0.790565706260654,
+          -0.685517934332868,
+          -0.475422390477297,
+          -0.265326846621726,
+          -0.0552313027661546,
+          0.154864241089417,
+          0.259912013017202,
+          0.364959784944988,
+          0.575055328800559,
+          0.78515087265613,
+          0.995246416511702,
+          1.41543750422284,
+          1.62553304807842,
+          1.83562859193399,
+          3.09620185506741
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "peak-rpm"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "peak-rpm",
+        "max_value": 0.1134020618556701,
+        "min_value": 0.1134020618556701
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "peak-rpm",
+        "type_list": [
+          "FLOAT",
+          "FLOAT4",
+          "FLOAT8",
+          "FLOAT64",
+          "DOUBLE",
+          "DOUBLE_PRECISION",
+          "NUMERIC",
+          "FloatType",
+          "DoubleType",
+          "float",
+          "float_",
+          "float16",
+          "float32",
+          "float64",
+          "number",
+          "DECIMAL",
+          "REAL"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_min_to_be_between",
+      "kwargs": {
+        "column": "city-mpg",
+        "max_value": -1.90408368803584,
+        "min_value": -1.90408368803584
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_max_to_be_between",
+      "kwargs": {
+        "column": "city-mpg",
+        "max_value": 3.69512493396093,
+        "min_value": 3.69512493396093
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_mean_to_be_between",
+      "kwargs": {
+        "column": "city-mpg",
+        "max_value": -3.284886681107422e-16,
+        "min_value": -3.284886681107422e-16
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_median_to_be_between",
+      "kwargs": {
+        "column": "city-mpg",
+        "max_value": -0.193214386870164,
+        "min_value": -0.193214386870164
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_quantile_values_to_be_between",
+      "kwargs": {
+        "allow_relative_error": "lower",
+        "column": "city-mpg",
+        "quantile_ranges": {
+          "quantiles": [
+            0.05,
+            0.25,
+            0.5,
+            0.75,
+            0.95
+          ],
+          "value_ranges": [
+            [
+              -1.43748296953611,
+              -1.43748296953611
+            ],
+            [
+              -0.970882251036382,
+              -0.970882251036382
+            ],
+            [
+              -0.193214386870164,
+              -0.193214386870164
+            ],
+            [
+              0.739987050129299,
+              0.739987050129299
+            ],
+            [
+              1.828722059962,
+              1.828722059962
+            ]
+          ]
+        }
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "city-mpg",
+        "value_set": [
+          -1.90408368803584,
+          -1.7485501152026,
+          -1.59301654236936,
+          -1.43748296953611,
+          -1.28194939670287,
+          -1.12641582386963,
+          -0.970882251036382,
+          -0.815348678203139,
+          -0.659815105369895,
+          -0.504281532536651,
+          -0.348747959703408,
+          -0.193214386870164,
+          -0.03768081403692,
+          0.117852758796324,
+          0.273386331629567,
+          0.428919904462811,
+          0.584453477296055,
+          0.739987050129299,
+          0.895520622962542,
+          1.05105419579579,
+          1.20658776862903,
+          1.36212134146227,
+          1.51765491429552,
+          1.67318848712876,
+          1.828722059962,
+          1.98425563279525,
+          3.07299064262795,
+          3.38405778829444,
+          3.69512493396093
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "city-mpg"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "city-mpg",
+        "max_value": 0.14948453608247422,
+        "min_value": 0.14948453608247422
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "city-mpg",
+        "type_list": [
+          "FLOAT",
+          "FLOAT4",
+          "FLOAT8",
+          "FLOAT64",
+          "DOUBLE",
+          "DOUBLE_PRECISION",
+          "NUMERIC",
+          "FloatType",
+          "DoubleType",
+          "float",
+          "float_",
+          "float16",
+          "float32",
+          "float64",
+          "number",
+          "DECIMAL",
+          "REAL"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_min_to_be_between",
+      "kwargs": {
+        "column": "highway-mpg",
+        "max_value": -2.15764304394519,
+        "min_value": -2.15764304394519
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_max_to_be_between",
+      "kwargs": {
+        "column": "highway-mpg",
+        "max_value": 3.40783789376088,
+        "min_value": 3.40783789376088
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_mean_to_be_between",
+      "kwargs": {
+        "column": "highway-mpg",
+        "max_value": -1.6939485324177645e-16,
+        "min_value": -1.6939485324177645e-16
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_median_to_be_between",
+      "kwargs": {
+        "column": "highway-mpg",
+        "max_value": -0.107202698474534,
+        "min_value": -0.107202698474534
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_quantile_values_to_be_between",
+      "kwargs": {
+        "allow_relative_error": "lower",
+        "column": "highway-mpg",
+        "quantile_ranges": {
+          "quantiles": [
+            0.05,
+            0.25,
+            0.5,
+            0.75,
+            0.95
+          ],
+          "value_ranges": [
+            [
+              -1.27888289588634,
+              -1.27888289588634
+            ],
+            [
+              -0.839502821856912,
+              -0.839502821856912
+            ],
+            [
+              -0.107202698474534,
+              -0.107202698474534
+            ],
+            [
+              0.478637400231368,
+              0.478637400231368
+            ],
+            [
+              1.65031759764317,
+              1.65031759764317
+            ]
+          ]
+        }
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "highway-mpg",
+        "value_set": [
+          -2.15764304394519,
+          -2.01118301926872,
+          -1.86472299459224,
+          -1.71826296991577,
+          -1.57180294523929,
+          -1.27888289588634,
+          -1.13242287120986,
+          -0.985962846533387,
+          -0.839502821856912,
+          -0.693042797180436,
+          -0.54658277250396,
+          -0.400122747827485,
+          -0.253662723151009,
+          -0.107202698474534,
+          0.0392573262019418,
+          0.185717350878417,
+          0.332177375554893,
+          0.478637400231368,
+          0.77155744958432,
+          0.918017474260795,
+          1.06447749893727,
+          1.21093752361375,
+          1.5038575729667,
+          1.65031759764317,
+          1.79677762231965,
+          2.23615769634908,
+          2.38261772102555,
+          2.82199779505498,
+          3.2613778690844,
+          3.40783789376088
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "highway-mpg"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "highway-mpg",
+        "max_value": 0.15463917525773196,
+        "min_value": 0.15463917525773196
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "highway-mpg",
+        "type_list": [
+          "FLOAT",
+          "FLOAT4",
+          "FLOAT8",
+          "FLOAT64",
+          "DOUBLE",
+          "DOUBLE_PRECISION",
+          "NUMERIC",
+          "FloatType",
+          "DoubleType",
+          "float",
+          "float_",
+          "float16",
+          "float32",
+          "float64",
+          "number",
+          "DECIMAL",
+          "REAL"
+        ]
+      },
+      "meta": {}
+    }
+  ],
+  "ge_cloud_id": null,
+  "meta": {
+    "columns": {
+      "aspiration": {
+        "description": ""
+      },
+      "body-style": {
+        "description": ""
+      },
+      "bore": {
+        "description": ""
+      },
+      "city-mpg": {
+        "description": ""
+      },
+      "compression-ratio": {
+        "description": ""
+      },
+      "curb-weight": {
+        "description": ""
+      },
+      "drive-wheels": {
+        "description": ""
+      },
+      "engine-location": {
+        "description": ""
+      },
+      "engine-size": {
+        "description": ""
+      },
+      "engine-type": {
+        "description": ""
+      },
+      "fuel-system": {
+        "description": ""
+      },
+      "fuel-type": {
+        "description": ""
+      },
+      "height": {
+        "description": ""
+      },
+      "highway-mpg": {
+        "description": ""
+      },
+      "horsepower": {
+        "description": ""
+      },
+      "length": {
+        "description": ""
+      },
+      "lnprice": {
+        "description": ""
+      },
+      "make": {
+        "description": ""
+      },
+      "num-of-cylinders": {
+        "description": ""
+      },
+      "num-of-doors": {
+        "description": ""
+      },
+      "peak-rpm": {
+        "description": ""
+      },
+      "stroke": {
+        "description": ""
+      },
+      "wheel-base": {
+        "description": ""
+      },
+      "width": {
+        "description": ""
+      }
+    },
+    "great_expectations_version": "0.15.4"
+  }
+}
