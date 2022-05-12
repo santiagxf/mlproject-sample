@@ -11,15 +11,15 @@ This sample repository contains a regression model for predicting the prices of 
 The project was structured as follows. 
 
 ```
-├── .aml                                # Azure Machine Learning resources (although not enforced by nor standard for Azure ML, it's an opinionated choice).
-├── .cloud                              # Infrastructure as code resources required to deploy you project to the cloud.
-├── data                                # Data folder to hold metadata related with the datasets you will work with.
+├── .aml                                # Azure Machine Learning resources (it's an opinionated choice).
+├── .cloud                              # Infrastructure as code resources.
+├── data                                # Data folder to hold metadata related with the datasets.
 │   ├── car-prices                          # Specific to the dataset car-prices
 │   │   └── sample                              # A sample of this dataset 
 │   └── great_expectations                  # Expectations about how the data should look like.
 ├── notebooks                           # Notebooks for interactive data analysis or modeling
 └── src                                 # Main source of the project
-    ├── carpricer                           # Package carpricer which contains the model carpricer source code
+    ├── carpricer                           # Package carpricer with model's source code
     │   ├── dataprep                            # Data preparations code
     │   └── train                               # Training code
     └── tests                               # Unit tests for all the packages in the source code
