@@ -12,6 +12,8 @@ The project was structured as follows.
 
 ```
 ├── .aml                                # Azure Machine Learning resources (it's an opinionated choice).
+│   ├── data                               # AML Datasets configuration
+│   └── jobs                               # AML training job definitions.
 ├── .cloud                              # Infrastructure as code resources.
 ├── data                                # Data folder to hold metadata related with the datasets.
 │   ├── car-prices                          # Specific to the dataset car-prices
