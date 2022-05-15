@@ -39,6 +39,9 @@ Follow this steps:
 * Clone the repository in your local machine.
 * Run `setup.sh` in a bash console. This will setup your `PYTHONPATH` by creating a `pth` file in the user's directory. For more details about why we used this choice read the blog post mentioned in the top. The script will also create a conda environment called `carpricer` and install all the dependencies.
 * Open the notebook `notebooks/carpricer_model.ipynb` to explore the model.
+* To run a training run from a console (bash) using:
+
+    `jobtools carpricer.train.trainer train_regressor --data-path data/car-prices/sample --params src/carpricer.params.yml`
 
 ### 2) Run it on Azure ML
 * Clone the repository in your local machine.

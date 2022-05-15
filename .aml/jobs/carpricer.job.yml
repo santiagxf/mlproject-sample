@@ -5,10 +5,10 @@ description: A model to predict the price of a car.
 code: ../../src
 command: >-
   jobtools carpricer.train.trainer train_regressor \
-            --input-dataset ${{inputs.input_dataset}} \
+            --data-path ${{inputs.data_path}} \
             --params ${{inputs.params}}
 inputs:
-  input_dataset:
+  data_path:
     path: azureml:car-prices:1
   params:
     type: uri_file

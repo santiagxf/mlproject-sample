@@ -12,9 +12,6 @@ import carpricer.dataprep as dataprep
 from carpricer.dataprep import transformations
 from carpricer.train import evaluator
 
-
-
-
 def fit_and_optimize(data: np.ndarray, labels: np.ndarray, base_model: Any, param_grid: Dict[str, List[Any]], 
                      cv: int = 5, scoring_fit: str='neg_mean_squared_error') -> GridSearchCV:
     """
@@ -53,14 +50,14 @@ def fit_and_optimize(data: np.ndarray, labels: np.ndarray, base_model: Any, para
     return fitted_model
 
 
-def train_regressor(input_dataset: str, params: SimpleNamespace, to_mlflow: bool = True ) -> Any:
+def train_regressor(data_path: str, params: SimpleNamespace, to_mlflow: bool = True ) -> Any:
     """
     Train and evaluate a regressor model using the input dataset and the given parameters, including
     hyper-parameter tunning. This method can log metrics, parameters and models using Mlflow.
 
     Parameters
     ----------
-    input_dataset : str
+    data_path : str
         Path where the input dataset is placed.
     params : SimpleNamespace
         Training parameters and configuration.
@@ -72,18 +69,18 @@ def train_regressor(input_dataset: str, params: SimpleNamespace, to_mlflow: bool
     Any
         The best found ML pipeline.
     """
-    X_train, y_train, X_test, y_test = dataprep.train_test_split(input_dataset, params.data.test_size, params.data.label)
+    X_train, y_train, X_test, y_test = dataprep.read_and_split(data_path, params.data.test_size, params.data.label)
 
     X_train_transformed, transforms = transformations.scale_and_encode(X_train)
     X_test_transformed = transforms.transform(X_test)  
 
-    base_model = XGBRegressor(silent=True, nthread=4, **vars(params.model.baseline))
+    base_model = XGBRegressor(nthread=4, **vars(params.model.baseline))
 
-    print(f"Looking for best combination of parameters with objective {params.model.tune.objective}. Parameters are {params.model.tune.search.keys()}")
+    print(f"Looking for best combination of parameters with objective {params.model.tune.objective}. Parameters are {params.model.tune.search.to_dict().keys()}")
     search = fit_and_optimize(X_train_transformed, 
                               y_train, 
                               base_model=base_model,
-                              param_grid=params.model.tune.search,
+                              param_grid=params.model.tune.search.to_dict(),
                               cv=params.model.tune.cv,
                               scoring_fit=params.model.tune.objective)
 
@@ -96,7 +93,7 @@ def train_regressor(input_dataset: str, params: SimpleNamespace, to_mlflow: bool
                                      ('model', best_model)])
 
     if to_mlflow:
-        mlflow.log_params(vars(params.model.baseline))   
+        mlflow.log_params(params.model.baseline.to_dict())   
         mlflow.log_params(search.best_params_)
         mlflow.log_metrics(metrics)
         mlflow.sklearn.log_model("model", model_pipeline, signature=infer_signature(X_test, y_test))

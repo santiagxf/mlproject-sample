@@ -12,9 +12,9 @@ else
 fi
 . $(conda info --json | jq -r '.root_prefix')/etc/profile.d/conda.sh
 conda activate $CONDA_ENV_NAME
-conda install jupyter ipykernel
+conda install -y jupyter ipykernel
 if [ -n "$PIP_REQUIREMENTS" ]; then
-    pip install -y -r $PIP_REQUIREMENTS
+    pip install -r $PIP_REQUIREMENTS --quiet
 fi
 python -m ipykernel install --user --name $CONDA_ENV_NAME --display-name "Python ($CONDA_ENV_NAME)"
 
