@@ -1,6 +1,6 @@
 # Structuring an ML project with software engineering practices
 
-The following repository gives a hint and an (opinionated) way to structure a machine learning project using software engineering practices. It tries to marry the benefits of using Jupyter Notebooks along with the good practices of developing code using a Python package. To read more details about the reasons for each choice please read the blog post: [Structure your Machine Learning project source code like a pro]().
+The following repository gives a hint and an (opinionated) way to structure a machine learning project using software engineering practices. It tries to marry the benefits of using Jupyter Notebooks along with the good practices of developing code using a Python package. To read more details about the reasons for each choice please read the blog post: [Structure your Machine Learning project source code like a pro](https://santiagof.medium.com/structure-your-machine-learning-project-source-code-like-a-pro-44815cac8652).
 
 ## About this sample
 
@@ -46,6 +46,7 @@ Follow this steps:
 ### 2) Run it on Azure ML
 * Clone the repository in your local machine.
 * Install Azure ML CLI v2. If you don't have it, follow the installation instructions at [Install and set up the CLI (v2)](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-configure-cli).
+* Create a compute named `trainer-cpu` or rename the compute specified in [.aml/jobs/carpricer.job.yml](.aml/jobs/carpricer.job.yml).
 * Register the dataset with `az ml data create -f .aml/data/carprices.yml` 
 * Create the training job with `az ml job create -f .aml/jobs/carpricer.job.yml`
 
