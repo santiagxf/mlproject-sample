@@ -8,24 +8,10 @@ model:
     cv: 5
     objective: neg_mean_squared_error
     search:
-      learning_rate:
-      - .03
-      - .05
-      - .07
-      - .5
-      max_depth:
-      - 3
-      - 7
-      - 9
-      - 20
-      alpha:
-      - 0
-      - .5
-      - 1
-      subsample:
-      - .6
-      - .8
-      - 1
+      learning_rate: [.03, .05, .07,  .5]
+      max_depth: [3, 7, 9, 20]
+      alpha: [0, .5, 1]
+      subsample: [.6, .8, 1]
 data:
   label: lnprice
   test_size: 0.3
