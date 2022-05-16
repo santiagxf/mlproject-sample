@@ -15,6 +15,7 @@ The project was structured as follows.
 │   ├── data                               # AML Datasets configuration
 │   └── jobs                               # AML training job definitions.
 ├── .cloud                              # Infrastructure as code resources.
+├── docs                                # Project documentation.
 ├── data                                # Data folder to hold metadata related with the datasets.
 │   ├── car-prices                          # Specific to the dataset car-prices
 │   │   └── sample                              # A sample of this dataset 
