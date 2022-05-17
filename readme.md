@@ -42,7 +42,10 @@ Follow this steps:
 * Open the notebook `notebooks/carpricer_model.ipynb` to train the model in an interactive way.
 * Alternatively, you can run a training routine from a console (bash) using:
 
-    `jobtools carpricer.train.trainer train_regressor --data-path data/car-prices/sample --params src/carpricer.params.yml`
+    ```bash
+    conda activate carpricer
+    jobtools carpricer.train.trainer train_regressor --data-path data/car-prices/sample --params src/carpricer.params.yml
+    ```
 
 ### 2) Run it on Azure ML
 * Clone the repository in your local machine.
@@ -50,6 +53,10 @@ Follow this steps:
 * Create a compute named `trainer-cpu` or rename the compute specified in [.aml/jobs/carpricer.job.yml](.aml/jobs/carpricer.job.yml).
 * Register the dataset with `az ml data create -f .aml/data/carprices.yml` 
 * Create the training job with `az ml job create -f .aml/jobs/carpricer.job.yml`
+
+
+### 3) Run it on AWS Sagemaker
+
 
 ## Contributing
 

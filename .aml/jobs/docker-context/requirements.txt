@@ -7,3 +7,4 @@ scikit-learn
 sklearn_evaluation
 mlflow
 azureml-mlflow
+papermill
