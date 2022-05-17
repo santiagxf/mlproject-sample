@@ -55,9 +55,6 @@ Follow this steps:
 * Create the training job with `az ml job create -f .aml/jobs/carpricer.job.yml`
 
 
-### 3) Run it on AWS Sagemaker
-
-
 ## Contributing
 
 This project welcomes contributions and suggestions. Open an issue and start the discussion!
