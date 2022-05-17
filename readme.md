@@ -39,8 +39,8 @@ This repository was constructed with portability in mind, so you have a couple o
 Follow this steps:
 * Clone the repository in your local machine.
 * Run `setup.sh` in a bash console. This will setup your `PYTHONPATH` by creating a `pth` file in the user's directory. For more details about why we used this choice read the blog post mentioned in the top. The script will also create a conda environment called `carpricer` and install all the dependencies.
-* Open the notebook `notebooks/carpricer_model.ipynb` to explore the model.
-* To run a training run from a console (bash) using:
+* Open the notebook `notebooks/carpricer_model.ipynb` to train the model in an interactive way.
+* Alternatively, you can run a training routine from a console (bash) using:
 
     `jobtools carpricer.train.trainer train_regressor --data-path data/car-prices/sample --params src/carpricer.params.yml`
 
