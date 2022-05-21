@@ -24,6 +24,8 @@ def evaluate_search(search: GridSearchCV, plot_params_name: List[str], subset_pa
         If provided, one 2D graph will be provided for each of the indicated parameters values combinations.
         Otherwise, one 2D graph will be generated for each combination of parameters that was used in the
         search (besides the one indicated on `plot_params_name`)
+    to_mlflow : bool, optional
+        Indicates if the plots generated should be logged to MLflow as figures. Defaults to `False`
     """
     if len(plot_params_name) != 2:
         ValueError("Exactly two parameters have to be indicated for the evaluation (they are displayed on a grid).")
@@ -50,7 +52,8 @@ def evaluate_search(search: GridSearchCV, plot_params_name: List[str], subset_pa
         sklearn_evaluation.plot.grid_search(search.cv_results_, 
                                             change=(tuple(plot_params_name)), 
                                             ax=ax)
-        mlflow.log_figure(fig, f"{plot_params_name[0]}_{plot_params_name[1]}.png")
+        if to_mlflow:
+            mlflow.log_figure(fig, f"{plot_params_name[0]}_{plot_params_name[1]}.png")
         ax.plot()
     else:
         for values in np.array(np.meshgrid(*graph_by_params_values)).T.reshape(-1, graph_by_params_dim):
@@ -63,7 +66,8 @@ def evaluate_search(search: GridSearchCV, plot_params_name: List[str], subset_pa
                                                 change=(tuple(plot_params_name)), 
                                                 subset=subset, 
                                                 ax=ax)
-            mlflow.log_figure(fig, f"{plot_params_name[0]}_{plot_params_name[1]}_{'_'.join(values)}.png")
+            if to_mlflow:
+                mlflow.log_figure(fig, f"{plot_params_name[0]}_{plot_params_name[1]}_{'_'.join(values)}.png")
             ax.plot()
 
 def evaluate_regressor(model: Any, X_test: np.ndarray, y_test: np.ndarray) -> Dict[str, float]:
