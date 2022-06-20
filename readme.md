@@ -46,6 +46,8 @@ Follow this steps:
     conda activate carpricer
     jobtools carpricer.train.trainer train_regressor --data-path data/car-prices/sample --params src/carpricer.params.yml
     ```
+    
+    > The project uses MLflow for tracking metrics and logging artifacts. By default, it will use MLflow local storage when running locally and Azure ML when running in the cloud. If you want to configure tracking to happen always in Azure ML, configure the environment variable `MLFLOW_TRACKING_URI` to point to Azure ML.
 
 ### 2) Run it on Azure ML
 * Clone the repository in your local machine.
