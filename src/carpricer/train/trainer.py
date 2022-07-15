@@ -96,6 +96,6 @@ def train_regressor(data_path: str, params: SimpleNamespace, to_mlflow: bool = T
         mlflow.log_params(params.model.baseline.to_dict())   
         mlflow.log_params(search.best_params_)
         mlflow.log_metrics(metrics)
-        mlflow.sklearn.log_model("model", model_pipeline, signature=infer_signature(X_test, y_test))
+        mlflow.sklearn.log_model(model_pipeline, "model", signature=infer_signature(X_test, y_test.values))
 
     return model_pipeline

@@ -19,6 +19,8 @@ fi
 python -m ipykernel install --user --name $CONDA_ENV_NAME --display-name "Python ($CONDA_ENV_NAME)"
 
 echo "Configuring PYTHONPATH for the project"
-cat >> $(python -m site --user-site)/$PROJECT_NAME.pth <<EOF
+PYTHON_SITE=$(python -m site --user-site)
+mkdir -p $PYTHON_SITE
+cat >> $PYTHON_SITE/$PROJECT_NAME.pth <<EOF
 $PWD/src
 EOF
