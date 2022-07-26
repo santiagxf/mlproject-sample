@@ -12,7 +12,8 @@ The project was structured as follows.
 
 ```
 ├── .aml                                # Azure Machine Learning resources (it's an opinionated choice).
-│   ├── data                               # AML Datasets configuration
+│   ├── data                               # AML Datasets configuration.
+│   ├── endpoints                          # Real time deployment service.
 │   └── jobs                               # AML training job definitions.
 ├── .cloud                              # Infrastructure as code resources.
 ├── docs                                # Project documentation.

@@ -1,6 +1,6 @@
 $schema: https://azuremlschemas.azureedge.net/latest/managedOnlineDeployment.schema.json
-name: carpricer-service
-endpoint_name:
+name: default
+endpoint_name: carpricer-service
 model: azureml:carpricer@latest
 type: managed
 instance_type: Standard_DS2_v2
