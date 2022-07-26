@@ -54,7 +54,7 @@ Follow this steps:
 
         ```bash
         jobtools carpricer.train.trainer train_regressor --data-path data/car-prices/sample \
-                                                        --params src/carpricer.params.yml
+                                                         --params src/carpricer.params.yml
         ```
 
 ### Run it on Azure ML
