@@ -39,6 +39,7 @@ This repository was constructed with portability in mind, so you have a couple o
 Follow this steps:
 * Clone the repository in your local machine.
 * Run `setup.sh` in a bash console. This will setup your `PYTHONPATH` by creating a `pth` file in the user's directory. For more details about why we used this choice read the blog post mentioned in the top. The script will also create a conda environment called `carpricer` and install all the dependencies.
+* MLflow is used for tracking. If you would like to track agaist an specific server, configure the environment variable `MLFLOW_TRACKING_URI` with you tracking server.
 * Open the notebook `notebooks/carpricer_model.ipynb` to train the model in an interactive way.
 * Alternatively, you can run a training routine from a console (bash) using:
 
@@ -55,6 +56,23 @@ Follow this steps:
 * Create a compute named `trainer-cpu` or rename the compute specified in [.aml/jobs/carpricer.job.yml](.aml/jobs/carpricer.job.yml).
 * Register the dataset with `az ml data create -f .aml/data/carprices.yml` 
 * Create the training job with `az ml job create -f .aml/jobs/carpricer.job.yml`
+
+(Optional)
+
+* Register the trained model in the registry:
+    
+    ```bash
+    JOB_NAME=$(az ml job list --query "[0].name" | tr -d '"')
+    az ml model create --name "carpricer" \
+                       --type "mlflow_model" \
+                       --path "azureml://jobs/$JOB_NAME/outputs/artifacts/pipeline"
+    ```
+* Deploy the model in an online endpoint:
+
+    ```bash
+    az ml online-endpoint create -f .aml/endpoints/carpricer-service.yml
+    az ml online-deployment create -f .aml/endpoints/deployments/default.yml --all-traffic
+    ```
 
 
 ## Contributing

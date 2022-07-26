@@ -50,7 +50,7 @@ def fit_and_optimize(data: np.ndarray, labels: np.ndarray, base_model: Any, para
     return fitted_model
 
 
-def train_regressor(data_path: str, params: SimpleNamespace, to_mlflow: bool = True ) -> Any:
+def train_regressor(data_path: str, params: SimpleNamespace) -> Any:
     """
     Train and evaluate a regressor model using the input dataset and the given parameters, including
     hyper-parameter tunning. This method can log metrics, parameters and models using Mlflow.
@@ -61,14 +61,14 @@ def train_regressor(data_path: str, params: SimpleNamespace, to_mlflow: bool = T
         Path where the input dataset is placed.
     params : SimpleNamespace
         Training parameters and configuration.
-    to_mlflow: bool
-        If metrics, parameters and models should be logged with mlflow.
 
     Returns
     -------
     Any
         The best found ML pipeline.
     """
+    mlflow.autolog()
+    
     X_train, y_train, X_test, y_test = dataprep.read_and_split(data_path, params.data.test_size, params.data.label)
 
     X_train_transformed, transforms = transformations.scale_and_encode(X_train)
@@ -85,17 +85,16 @@ def train_regressor(data_path: str, params: SimpleNamespace, to_mlflow: bool = T
                               scoring_fit=params.model.tune.objective)
 
     print(f"Evaluating the performance of the model")
-    evaluator.evaluate_search(search, plot_params_name=['learning_rate', 'max_depth'], to_mlflow = to_mlflow)
+    evaluator.evaluate_search(search, plot_params_name=['learning_rate', 'max_depth'], to_mlflow = True)
 
     best_model = search.best_estimator_
     metrics = evaluator.evaluate_regressor(best_model, X_test_transformed, y_test)
     model_pipeline = Pipeline(steps=[('preprocessing', transforms),
                                      ('model', best_model)])
 
-    if to_mlflow:
-        mlflow.log_params(params.model.baseline.to_dict())   
-        mlflow.log_params(search.best_params_)
-        mlflow.log_metrics(metrics)
-        mlflow.sklearn.log_model(model_pipeline, "model", signature=infer_signature(X_test, y_test.values))
+    mlflow.log_params(params.model.baseline.to_dict())   
+    mlflow.log_params(search.best_params_)
+    mlflow.log_metrics(metrics)
+    mlflow.sklearn.log_model(model_pipeline, "pipeline", signature=infer_signature(X_test, y_test.values))
 
     return model_pipeline
