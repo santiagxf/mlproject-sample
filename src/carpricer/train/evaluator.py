@@ -58,7 +58,7 @@ def evaluate_search(search: GridSearchCV, plot_params_name: List[str], subset_pa
     else:
         for values in np.array(np.meshgrid(*graph_by_params_values)).T.reshape(-1, graph_by_params_dim):
             subset = { graph_by_params_keys[i]: [values[i]] for i in range(0, graph_by_params_dim) }
-            title = ', '.join([f"{item[0]} {item[1]}" for item in subset.items()])
+            title = ', '.join([f"{item[0]}={item[1][0]}" for item in subset.items()])
 
             fig = plt.figure()
             ax = fig.add_subplot()
@@ -68,7 +68,9 @@ def evaluate_search(search: GridSearchCV, plot_params_name: List[str], subset_pa
                                                 subset=subset, 
                                                 ax=ax)
             if to_mlflow:
-                mlflow.log_figure(fig, f"{plot_params_name[0]}_{plot_params_name[1]}_{title.replace(', ', '_')}.png")
+                fname = f"{plot_params_name[0]}_{plot_params_name[1]}_{title.replace(', ', '_').replace('=', '_')}.png"
+                print(f"Logging figure to MLflow with name: {fname}")
+                mlflow.log_figure(fig, fname)
             ax.plot()
 
 def evaluate_regressor(model: Any, X_test: np.ndarray, y_test: np.ndarray) -> Dict[str, float]:

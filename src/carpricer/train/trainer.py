@@ -92,6 +92,7 @@ def train_regressor(data_path: str, params: SimpleNamespace) -> Any:
     model_pipeline = Pipeline(steps=[('preprocessing', transforms),
                                      ('model', best_model)])
 
+    print(f"Logging the pipeline to MLflow")
     mlflow.log_params(params.model.baseline.to_dict())   
     mlflow.log_params(search.best_params_)
     mlflow.log_metrics(metrics)
