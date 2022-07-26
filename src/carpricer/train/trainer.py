@@ -67,8 +67,6 @@ def train_regressor(data_path: str, params: SimpleNamespace) -> Any:
     Any
         The best found ML pipeline.
     """
-    mlflow.autolog()
-    
     X_train, y_train, X_test, y_test = dataprep.read_and_split(data_path, params.data.test_size, params.data.label)
 
     X_train_transformed, transforms = transformations.scale_and_encode(X_train)
