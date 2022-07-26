@@ -12,9 +12,6 @@ The project was structured as follows.
 
 ```
 ├── .aml                                # Azure Machine Learning resources (it's an opinionated choice).
-│   ├── data                               # AML Datasets configuration.
-│   ├── endpoints                          # Real time deployment service.
-│   └── jobs                               # AML training job definitions.
 ├── .cloud                              # Infrastructure as code resources.
 ├── docs                                # Project documentation.
 ├── data                                # Data folder to hold metadata related with the datasets.
@@ -35,14 +32,14 @@ The project was structured as follows.
 
 This repository was constructed with portability in mind, so you have a couple of options to run it:
 
-### 1) Locally (linux only - changes to make it work on Windows are on you :D)
+### Locally (linux only - changes to make it work on Windows are on you :D)
 
 Follow this steps:
-* Clone the repository in your local machine.
-* Run `setup.sh` in a bash console. This will setup your `PYTHONPATH` by creating a `pth` file in the user's directory. For more details about why we used this choice read the blog post mentioned in the top. The script will also create a conda environment called `carpricer` and install all the dependencies.
-* MLflow is used for tracking. If you would like to track agaist an specific server, configure the environment variable `MLFLOW_TRACKING_URI` with you tracking server.
-* Open the notebook `notebooks/carpricer_model.ipynb` to train the model in an interactive way.
-* Alternatively, you can run a training routine from a console (bash) using:
+1. Clone the repository in your local machine.
+1. Run `setup.sh` in a bash console. This will setup your `PYTHONPATH` by creating a `pth` file in the user's directory. For more details about why we used this choice read the blog post mentioned in the top. The script will also create a conda environment called `carpricer` and install all the dependencies.
+1. MLflow is used for tracking. If you would like to track agaist an specific server, configure the environment variable `MLFLOW_TRACKING_URI` with you tracking server.
+1. Open the notebook `notebooks/carpricer_model.ipynb` to train the model in an interactive way.
+1. Alternatively, you can run a training routine from a console (bash) using:
 
     ```bash
     conda activate carpricer
@@ -51,16 +48,16 @@ Follow this steps:
     
     > The project uses MLflow for tracking metrics and logging artifacts. By default, it will use MLflow local storage when running locally and Azure ML when running in the cloud. If you want to configure tracking to happen always in Azure ML, configure the environment variable `MLFLOW_TRACKING_URI` to point to Azure ML.
 
-### 2) Run it on Azure ML
-* Clone the repository in your local machine.
-* Install Azure ML CLI v2. If you don't have it, follow the installation instructions at [Install and set up the CLI (v2)](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-configure-cli).
-* Create a compute named `trainer-cpu` or rename the compute specified in [.aml/jobs/carpricer.job.yml](.aml/jobs/carpricer.job.yml).
-* Register the dataset with `az ml data create -f .aml/data/carprices.yml` 
-* Create the training job with `az ml job create -f .aml/jobs/carpricer.job.yml`
+### Run it on Azure ML
+1. Clone the repository in your local machine.
+1. Install Azure ML CLI v2. If you don't have it, follow the installation instructions at [Install and set up the CLI (v2)](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-configure-cli).
+1. Create a compute named `trainer-cpu` or rename the compute specified in [.aml/jobs/carpricer.job.yml](.aml/jobs/carpricer.job.yml).
+1. Register the dataset with `az ml data create -f .aml/data/carprices.yml` 
+1. Create the training job with `az ml job create -f .aml/jobs/carpricer.job.yml`
 
 (Optional)
 
-* Register the trained model in the registry:
+6. Register the trained model in the registry:
     
     ```bash
     JOB_NAME=$(az ml job list --query "[0].name" | tr -d '"')
@@ -68,7 +65,7 @@ Follow this steps:
                        --type "mlflow_model" \
                        --path "azureml://jobs/$JOB_NAME/outputs/artifacts/pipeline"
     ```
-* Deploy the model in an online endpoint:
+6. Deploy the model in an online endpoint:
 
     ```bash
     az ml online-endpoint create -f .aml/endpoints/carpricer-service.yml
