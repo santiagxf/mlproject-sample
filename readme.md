@@ -85,8 +85,8 @@ Follow this steps:
 6. Deploy the model in an online endpoint:
 
     ```bash
-    az ml online-endpoint create -f .aml/endpoints/carpricer-service.yml
-    az ml online-deployment create -f .aml/endpoints/deployments/default.yml --all-traffic
+    az ml online-endpoint create -f .aml/endpoints/carpricer-online/endpoint.yml
+    az ml online-deployment create -f .aml/endpoints/carpricer-online/deployments/default.yml --all-traffic
     ```
 
 

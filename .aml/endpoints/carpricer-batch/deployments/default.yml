@@ -1,0 +1,8 @@
+$schema: https://azuremlschemas.azureedge.net/latest/batchDeployment.schema.json
+name: default
+endpoint_name: carpricer-batch
+compute: azureml:cluster-cpu
+model: azureml:carpricer@latest
+resources:
+    instance_count: 1
+   
